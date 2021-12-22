@@ -1,3 +1,10 @@
+## [31.5.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.0...v31.5.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* rename api check file ([bab5d82](https://github.com/Metrika-Inc/elastic-charts/commit/bab5d8214a56b92ecd0fbda120163e0519489124))
+
 # [31.5.0](https://github.com/Metrika-Inc/elastic-charts/compare/v31.4.1...v31.5.0) (2021-10-26)
 
 
