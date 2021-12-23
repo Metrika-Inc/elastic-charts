@@ -1,3 +1,10 @@
+## [31.5.2](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.1...v31.5.2) (2021-12-23)
+
+
+### Bug Fixes
+
+* support M1 build (node-canvas dart-sass), upgrade to uuid v8, ([a372e0c](https://github.com/Metrika-Inc/elastic-charts/commit/a372e0c020b1b4eeb528c80ba6b6a85f36a7d895))
+
 ## [31.5.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.0...v31.5.1) (2021-12-22)
 
 
