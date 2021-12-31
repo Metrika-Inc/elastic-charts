@@ -6,6 +6,7 @@
 
 import { $Values } from 'utility-types';
 import { ComponentType } from 'react';
+import { CSSProperties } from 'react';
 import { default as React_2 } from 'react';
 import { ReactChild } from 'react';
 import { ReactNode } from 'react';
@@ -2104,6 +2105,7 @@ export type TooltipProps = TooltipPortalSettings<'chart'> & {
     unit?: string;
     customTooltip?: CustomTooltip;
     stickTo?: TooltipStickTo;
+    customStyle?: CSSProperties;
 };
 
 // @public
