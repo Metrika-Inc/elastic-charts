@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import React, { ComponentType, ReactChild } from 'react';
+import React, { ComponentType, CSSProperties, ReactChild } from 'react';
 
 import { CustomXDomain, GroupByAccessor, Spec, TooltipStickTo } from '.';
 import { Cell } from '../chart_types/heatmap/layout/types/viewmodel_types';
@@ -288,6 +288,8 @@ export type TooltipProps = TooltipPortalSettings<'chart'> & {
    * @defaultValue mousePosition
    */
   stickTo?: TooltipStickTo;
+
+  customStyle?: CSSProperties;
 };
 
 /**

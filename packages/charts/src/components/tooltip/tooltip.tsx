@@ -162,7 +162,7 @@ const TooltipComponent = ({
     }
 
     return (
-      <div className="echTooltip">
+      <div className="echTooltip" style={typeof settings !== 'string' ? settings?.customStyle : undefined}>
         {renderHeader(info.header)}
         {renderValues(info.values)}
       </div>
