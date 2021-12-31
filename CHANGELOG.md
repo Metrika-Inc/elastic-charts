@@ -1,3 +1,15 @@
+# [31.6.0](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.2...v31.6.0) (2021-12-31)
+
+
+### Bug Fixes
+
+* **tooltip:** add api.md ([bc2afd9](https://github.com/Metrika-Inc/elastic-charts/commit/bc2afd95b21d7242b602805e929b0dc0c384365a))
+
+
+### Features
+
+* **tooltip:** add custom style support from settings ([5e6ae1b](https://github.com/Metrika-Inc/elastic-charts/commit/5e6ae1bab64258b0c5166c8820264218d2cf9ce7))
+
 ## [31.5.2](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.1...v31.5.2) (2021-12-23)
 
 
