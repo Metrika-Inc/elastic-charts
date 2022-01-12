@@ -1,3 +1,11 @@
+## [31.6.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.6.0...v31.6.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* **xy:** add polar support for stacked bar ([30618c2](https://github.com/Metrika-Inc/elastic-charts/commit/30618c22febac5a6f294f7da0e92442b2a33f25d))
+* **xy:** add stacked bar with sign test ([8bed1b6](https://github.com/Metrika-Inc/elastic-charts/commit/8bed1b6c014a17bd493f2391d9e44b07bf84dc4a))
+
 # [31.6.0](https://github.com/Metrika-Inc/elastic-charts/compare/v31.5.2...v31.6.0) (2021-12-31)
 
 
