@@ -331,6 +331,39 @@ describe('Series', () => {
     const { formattedDataSeries } = computeSeriesDomainsSelector(store.getState());
     expect(formattedDataSeries.map(matchOnlyDataSeriesLegacySnapshot)).toMatchSnapshot();
   });
+  test('Can stack simple dataseries with scale to extent with sign', () => {
+    const store = MockStore.default();
+    MockStore.addSpecs(
+      [
+        MockGlobalSpec.axis({
+          id: 'y',
+          position: Position.Left,
+          domain: { fit: true },
+        }),
+        MockSeriesSpec.bar({
+          id: 'spec1',
+          yAccessors: ['y1'],
+          splitSeriesAccessors: ['g'],
+          stackAccessors: ['x'],
+          xScaleType: ScaleType.Linear,
+          data: [
+            { x: 1, y1: 1, g: 'a' },
+            { x: 2, y1: 2, g: 'a' },
+            { x: 4, y1: 4, g: 'a' },
+            { x: 1, y1: 21, g: 'b' },
+            { x: 3, y1: 23, g: 'b' },
+            { x: 1, y1: -1, g: 'c' },
+            { x: 2, y1: -2, g: 'c' },
+            { x: 4, y1: -4, g: 'c' },
+          ],
+        }),
+      ],
+      store,
+    );
+
+    const { formattedDataSeries } = computeSeriesDomainsSelector(store.getState());
+    expect(formattedDataSeries.map(matchOnlyDataSeriesLegacySnapshot)).toMatchSnapshot();
+  });
   test('Can stack multiple dataseries with scale to extent', () => {
     const store = MockStore.default();
     MockStore.addSpecs(

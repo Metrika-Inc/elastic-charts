@@ -119,7 +119,7 @@ export function formatStackedDataSeriesValues(
     return acc;
   }, {});
 
-  return Object.keys(unionedYStacks).map((stackedDataSeriesKey) => {
+  const r = Object.keys(unionedYStacks).map((stackedDataSeriesKey) => {
     const dataSeriesProps = dataSeriesKeys[stackedDataSeriesKey];
     const dsMap = xValueMap.get(stackedDataSeriesKey);
     const { y0: y0StackArray, y1: y1StackArray } = unionedYStacks[stackedDataSeriesKey];
@@ -156,6 +156,41 @@ export function formatStackedDataSeriesValues(
       .filter((d) => d !== null) as DataSeriesDatum[];
     return {
       ...dataSeriesProps,
+      data,
+    };
+  });
+
+  if (stackMode) return r;
+
+  // Fix polar stack on bar charts - only on linear stackMode (undefined)
+  return r.map((s, index) => {
+    // ignore un-stacked bars or not bars
+    if (s.seriesType !== 'bar' || !s.isStacked) return s;
+    const data = s.data.map((sData) => {
+      // ignore undefined on datum
+      if (!sData.datum) return sData;
+
+      let y1 = sData.initialY1 || 0;
+      let y0 = sData.initialY0 || 0;
+
+      if (y1) {
+        for (let i = 0; i < index; i++) {
+          // ignore different groups
+          if (!r[i].isStacked || r[i].groupId !== s.groupId) continue;
+          const xiY1 = r[i].data.find((p) => p.x === sData.x)?.initialY1;
+          // stack only on same polar
+          if (!!y1 && !!xiY1 && ((y1 >= 0 && xiY1 >= 0) || (y1 < 0 && xiY1 < 0))) y0 = (y0 || 0) + xiY1;
+        }
+        y1 = (y0 || 0) + y1 - (sData.initialY0 || 0); // remove initial offset if any
+      }
+      return {
+        ...sData,
+        y1,
+        y0,
+      };
+    });
+    return {
+      ...s,
       data,
     };
   });
