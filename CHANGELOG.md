@@ -1,3 +1,15 @@
+# [31.7.0](https://github.com/Metrika-Inc/elastic-charts/compare/v31.6.1...v31.7.0) (2022-03-15)
+
+
+### Bug Fixes
+
+* **heatmap:** add api.md ([8ba482f](https://github.com/Metrika-Inc/elastic-charts/commit/8ba482ff1caad1db6dcec19d4f04fa4ac563c027))
+
+
+### Features
+
+* **heatmap:** added valueFormatterRaw ([dc8e322](https://github.com/Metrika-Inc/elastic-charts/commit/dc8e32284fed810d0927ee4a275d8c998966e9b0))
+
 ## [31.6.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.6.0...v31.6.1) (2022-01-12)
 
 
