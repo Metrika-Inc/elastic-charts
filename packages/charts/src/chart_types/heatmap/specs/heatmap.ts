@@ -29,6 +29,7 @@ import { Accessor, AccessorFn } from '../../../utils/accessor';
 import { Color, Datum, RecursivePartial } from '../../../utils/common';
 import { config } from '../layout/config/config';
 import { Config } from '../layout/types/config_types';
+import { HeatmapCellDatum } from '../layout/viewmodel/viewmodel';
 import { X_SCALE_DEFAULT } from './scale_defaults';
 
 const defaultProps = {
@@ -66,6 +67,7 @@ export interface HeatmapSpec extends Spec {
   yAccessor: Accessor | AccessorFn;
   valueAccessor: Accessor | AccessorFn;
   valueFormatter: (value: number) => string;
+  valueFormatterRaw?: (datum: HeatmapCellDatum) => string;
   xSortPredicate: Predicate;
   ySortPredicate: Predicate;
   xScaleType: SeriesScales['xScaleType'];

@@ -1023,6 +1023,8 @@ export interface HeatmapSpec extends Spec {
     // (undocumented)
     valueFormatter: (value: number) => string;
     // (undocumented)
+    valueFormatterRaw?: (datum: HeatmapCellDatum) => string;
+    // (undocumented)
     xAccessor: Accessor | AccessorFn;
     // (undocumented)
     xScaleType: SeriesScales['xScaleType'];

@@ -228,7 +228,7 @@ export function shapeViewModel(
       },
       value: d.value,
       visible: !isFilteredValue(filterRanges, d.value),
-      formatted: spec.valueFormatter(d.value),
+      formatted: spec.valueFormatterRaw ? spec.valueFormatterRaw(d) : spec.valueFormatter(d.value),
     };
     return acc;
   }, {});
