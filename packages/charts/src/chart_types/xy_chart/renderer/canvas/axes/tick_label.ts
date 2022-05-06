@@ -102,7 +102,7 @@ export function renderTickLabel(ctx: CanvasRenderingContext2D, tick: AxisTick, s
         x: x + offsetX,
         y: y + offsetY,
       },
-      labelFormat ? labelFormat(tick.value) : tick.label,
+      labelFormat && tick.label ? labelFormat(tick.value) : tick.label,
       {
         ...font,
         fontSize: labelStyle.fontSize,
