@@ -1,3 +1,10 @@
+## [31.7.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.0...v31.7.1) (2022-05-06)
+
+
+### Bug Fixes
+
+* **xy:** labelformatter overlap fix ([a5500a0](https://github.com/Metrika-Inc/elastic-charts/commit/a5500a03adc160a5c78a6c06883a15c1b120131d))
+
 # [31.7.0](https://github.com/Metrika-Inc/elastic-charts/compare/v31.6.1...v31.7.0) (2022-03-15)
 
 
