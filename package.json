@@ -196,7 +196,7 @@
     "sass-graph": "^3.0.5",
     "sass-loader": "^10.1.1",
     "seedrandom": "^3.0.5",
-    "semantic-release": "^17.4.2",
+    "semantic-release": "^19.0.3",
     "semantic-release-slack-bot": "^2.1.0",
     "slugify": "^1.5.0",
     "style-loader": "^2.0.0",
