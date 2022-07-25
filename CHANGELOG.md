@@ -1,3 +1,12 @@
+## [31.7.2](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.1...v31.7.2) (2022-07-25)
+
+
+### Bug Fixes
+
+* **goal:** add font family ([08a1ce5](https://github.com/Metrika-Inc/elastic-charts/commit/08a1ce54b2a331134de8e356ae63090d2d2a7c9c))
+* **goal:** add more custom colors to goal chart ([3aa380c](https://github.com/Metrika-Inc/elastic-charts/commit/3aa380c6b10cbe71f750089f42d5d2ecb30941aa))
+* **goal:** fix target optional ([d780d21](https://github.com/Metrika-Inc/elastic-charts/commit/d780d213b6fc2e70a2d9d2b38fbc85f825c60576))
+
 ## [31.7.1](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.0...v31.7.1) (2022-05-06)
 
 
