@@ -47,6 +47,8 @@ export function renderCanvas2d(
   // const { fontFamily } = config;
 
   const fontFamily = get(config, 'fontFamily', 'sans-serif');
+  const actualFillColor = get(config, 'actualFillColor', 'black');
+  const targetFillColor = get(config, 'targetFillColor', 'black');
 
   withContext(ctx, (ctx) => {
     // set some defaults for the overall rendering
@@ -138,14 +140,14 @@ export function renderCanvas2d(
       {
         order: 1,
         landmarks: { from: 'base', to: 'actual' },
-        aes: { shape: 'line', fillColor: 'black', lineWidth: tickLength },
+        aes: { shape: 'line', fillColor: actualFillColor, lineWidth: tickLength },
       },
       ...(target
         ? [
             {
               order: 2,
               landmarks: { at: 'target' },
-              aes: { shape: 'line', fillColor: 'black', lineWidth: barThickness / GOLDEN_RATIO },
+              aes: { shape: 'line', fillColor: targetFillColor, lineWidth: barThickness / GOLDEN_RATIO },
             },
           ]
         : []),

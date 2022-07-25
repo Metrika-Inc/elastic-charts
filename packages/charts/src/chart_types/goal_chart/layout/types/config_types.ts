@@ -42,4 +42,8 @@ export interface Config {
   // other
   backgroundColor: Color;
   sectorLineWidth: Pixels;
+
+  // colors
+  actualFillColor: Color;
+  targetFillColor: Color;
 }
