@@ -44,8 +44,9 @@ export function renderCanvas2d(
   dpr: number,
   { config, bulletViewModel, chartCenter }: ShapeViewModel,
 ) {
-  // eslint-disable-next-line no-empty-pattern
-  const {} = config;
+  // const { fontFamily } = config;
+
+  const fontFamily = get(config, 'fontFamily', 'sans-serif');
 
   withContext(ctx, (ctx) => {
     // set some defaults for the overall rendering
@@ -139,11 +140,15 @@ export function renderCanvas2d(
         landmarks: { from: 'base', to: 'actual' },
         aes: { shape: 'line', fillColor: 'black', lineWidth: tickLength },
       },
-      {
-        order: 2,
-        landmarks: { at: 'target' },
-        aes: { shape: 'line', fillColor: 'black', lineWidth: barThickness / GOLDEN_RATIO },
-      },
+      ...(target
+        ? [
+            {
+              order: 2,
+              landmarks: { at: 'target' },
+              aes: { shape: 'line', fillColor: 'black', lineWidth: barThickness / GOLDEN_RATIO },
+            },
+          ]
+        : []),
       ...bulletViewModel.ticks.map((b, i) => ({
         order: 3,
         landmarks: { at: `tick_${i}` },
@@ -162,7 +167,7 @@ export function renderCanvas2d(
           textAlign: vertical ? 'right' : 'center',
           textBaseline: vertical ? 'middle' : 'top',
           fillColor: 'black',
-          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '500', fontFamily: 'sans-serif' },
+          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '500', fontFamily },
           axisNormalOffset: -barThickness,
         },
       })),
@@ -176,7 +181,7 @@ export function renderCanvas2d(
           textAlign: vertical ? 'center' : 'right',
           textBaseline: 'bottom',
           fillColor: 'black',
-          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily: 'sans-serif' },
+          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily },
         },
       },
       {
@@ -189,7 +194,7 @@ export function renderCanvas2d(
           textAlign: vertical ? 'center' : 'right',
           textBaseline: 'top',
           fillColor: 'black',
-          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily: 'sans-serif' },
+          fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily },
         },
       },
       ...(circular
@@ -202,7 +207,7 @@ export function renderCanvas2d(
                 textAlign: 'center',
                 textBaseline: 'bottom',
                 fillColor: 'black',
-                fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily: 'sans-serif' },
+                fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily },
               },
             },
             {
@@ -213,7 +218,7 @@ export function renderCanvas2d(
                 textAlign: 'center',
                 textBaseline: 'top',
                 fillColor: 'black',
-                fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily: 'sans-serif' },
+                fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily },
               },
             },
           ]
