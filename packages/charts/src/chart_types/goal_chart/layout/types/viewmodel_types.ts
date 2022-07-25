@@ -40,7 +40,7 @@ interface TickViewModel {
 export interface BulletViewModel {
   subtype: string;
   base: number;
-  target: number;
+  target?: number;
   actual: number;
   bands: Array<BandViewModel>;
   ticks: Array<TickViewModel>;
