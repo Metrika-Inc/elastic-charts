@@ -51,6 +51,9 @@ export const configMetadata: Record<string, ConfigItem> = {
 
   backgroundColor: { dflt: '#ffffff', type: 'color' },
   sectorLineWidth: { dflt: 1, min: 0, max: 4, type: 'number' },
+
+  actualFillColor: { dflt: 'black', type: 'color' },
+  targetFillColor: { dflt: 'black', type: 'color' },
 };
 
 /** @internal */
