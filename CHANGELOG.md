@@ -1,3 +1,10 @@
+## [31.7.3](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.2...v31.7.3) (2023-01-24)
+
+
+### Bug Fixes
+
+* **legend:** fix legend height calc ([df4ef57](https://github.com/Metrika-Inc/elastic-charts/commit/df4ef570d1d6f62e3433d37b9c821d289d3af313))
+
 ## [31.7.2](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.1...v31.7.2) (2022-07-25)
 
 
