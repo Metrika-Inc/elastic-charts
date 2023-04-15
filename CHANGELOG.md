@@ -1,3 +1,10 @@
+## [31.7.5](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.4...v31.7.5) (2023-04-15)
+
+
+### Bug Fixes
+
+* **goal:** fix goal chart colors config ([cb09369](https://github.com/Metrika-Inc/elastic-charts/commit/cb0936983c8eab1b1cc6afd60f23468d29c0c046))
+
 ## [31.7.4](https://github.com/Metrika-Inc/elastic-charts/compare/v31.7.3...v31.7.4) (2023-04-15)
 
 
