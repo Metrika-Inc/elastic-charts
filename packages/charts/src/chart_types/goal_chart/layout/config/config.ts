@@ -54,6 +54,10 @@ export const configMetadata: Record<string, ConfigItem> = {
 
   actualFillColor: { dflt: 'black', type: 'color' },
   targetFillColor: { dflt: 'black', type: 'color' },
+
+  tickColor: { dflt: 'darkgrey', type: 'color' },
+  tickTextColor: { dflt: 'black', type: 'color' },
+  labelsColor: { dflt: 'black', type: 'color' },
 };
 
 /** @internal */
