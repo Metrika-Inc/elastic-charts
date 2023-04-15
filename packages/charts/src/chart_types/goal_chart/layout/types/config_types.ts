@@ -46,4 +46,9 @@ export interface Config {
   // colors
   actualFillColor: Color;
   targetFillColor: Color;
+
+  // colors fixed on the theme
+  tickColor: Color;
+  tickTextColor: Color;
+  labelsColor: Color;
 }

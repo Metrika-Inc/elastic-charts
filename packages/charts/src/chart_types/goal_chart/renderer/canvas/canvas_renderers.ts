@@ -50,6 +50,10 @@ export function renderCanvas2d(
   const actualFillColor = get(config, 'actualFillColor', 'black');
   const targetFillColor = get(config, 'targetFillColor', 'black');
 
+  const tickColor = get(config, 'tickColor', 'darkgrey');
+  const tickTextColor = get(config, 'tickTextColor', 'black');
+  const labelsColor = get(config, 'labelsColor', 'black');
+
   withContext(ctx, (ctx) => {
     // set some defaults for the overall rendering
 
@@ -156,7 +160,7 @@ export function renderCanvas2d(
         landmarks: { at: `tick_${i}` },
         aes: {
           shape: 'line',
-          fillColor: 'darkgrey',
+          fillColor: tickColor,
           lineWidth: tickLength,
           axisNormalOffset: tickOffset,
         },
@@ -168,7 +172,7 @@ export function renderCanvas2d(
           shape: 'text',
           textAlign: vertical ? 'right' : 'center',
           textBaseline: vertical ? 'middle' : 'top',
-          fillColor: 'black',
+          fillColor: tickTextColor,
           fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '500', fontFamily },
           axisNormalOffset: -barThickness,
         },
@@ -182,7 +186,7 @@ export function renderCanvas2d(
           axisTangentOffset: circular || !vertical ? 0 : 2 * labelFontSize,
           textAlign: vertical ? 'center' : 'right',
           textBaseline: 'bottom',
-          fillColor: 'black',
+          fillColor: labelsColor,
           fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily },
         },
       },
@@ -195,7 +199,7 @@ export function renderCanvas2d(
           axisTangentOffset: circular || !vertical ? 0 : 2 * labelFontSize,
           textAlign: vertical ? 'center' : 'right',
           textBaseline: 'top',
-          fillColor: 'black',
+          fillColor: labelsColor,
           fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily },
         },
       },
@@ -208,7 +212,7 @@ export function renderCanvas2d(
                 shape: 'text',
                 textAlign: 'center',
                 textBaseline: 'bottom',
-                fillColor: 'black',
+                fillColor: labelsColor,
                 fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '900', fontFamily },
               },
             },
@@ -219,7 +223,7 @@ export function renderCanvas2d(
                 shape: 'text',
                 textAlign: 'center',
                 textBaseline: 'top',
-                fillColor: 'black',
+                fillColor: labelsColor,
                 fontShape: { fontStyle: 'normal', fontVariant: 'normal', fontWeight: '300', fontFamily },
               },
             },
@@ -295,6 +299,7 @@ export function renderCanvas2d(
                   } else if (aes.shape === 'text') {
                     const label = at.slice(0, 5) === 'label';
                     const central = at.slice(0, 7) === 'central';
+                    ctx.fillStyle = aes.fillColor;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = label || central ? textBaseline : 'middle';
                     ctx.font = cssFontShorthand(
@@ -336,6 +341,7 @@ export function renderCanvas2d(
                   } else if (aes.shape === 'text') {
                     ctx.textAlign = textAlign;
                     ctx.textBaseline = textBaseline;
+                    ctx.fillStyle = aes.fillColor;
                     ctx.font = cssFontShorthand(fontShape, tickFontSize);
                     ctx.scale(1, -1);
                     ctx.translate(vertical ? 0 : atPx, vertical ? -atPx : 0);
