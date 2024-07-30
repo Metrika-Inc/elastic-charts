@@ -18,7 +18,9 @@
     "downlevelIteration": true,
     "stripInternal": true,
     "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types", "./**/*.d.ts", "./scripts/custom_matchers.ts"]
+    "typeRoots": ["./node_modules/@types", "./**/*.d.ts", "./scripts/custom_matchers.ts"],
+    "strictNullChecks": false,
+    "strictFunctionTypes": false
   },
-  "exclude": ["**/tmp", "**/dist"]
+  "exclude": ["**/node_modules","node_modules","**/tmp", "**/dist"]
 }

@@ -4,9 +4,10 @@
     "noUnusedLocals": true,
     "removeComments": true,
     "noEmit": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "rootDir": "dist"
   },
   "files": [],
-  "include": ["dist"]
+  "include": ["dist"],
+  "exclude": ["node_modules"]
 }

@@ -17,9 +17,9 @@
  * under the License.
  */
 
+import { SpecList, PointerState } from './chart_state';
 import { ChartType } from '../chart_types';
 import { Spec } from '../specs';
-import { SpecList, PointerState } from './chart_state';
 
 /** @internal */
 export function getSpecsFromStore<U extends Spec>(specs: SpecList, chartType: ChartType, specType?: string): U[] {

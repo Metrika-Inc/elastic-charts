@@ -7,5 +7,5 @@
   },
   "files": [],
   "include": ["src/**/*"],
-  "exclude": ["**/*.test.*", "**/__mocks__", "src/mocks/**/*", "src/utils/data_samples/**/*"]
+  "exclude": ["node_modules","**/*.test.*", "**/__mocks__", "src/mocks/**/*", "src/utils/data_samples/**/*"]
 }
