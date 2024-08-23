@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "chroma-js": "^2.4.2",
+    "chroma-js": "^2.6.0",
     "classnames": "^2.5.1",
     "d3-array": "^1.2.4",
     "d3-cloud": "^1.2.7",
