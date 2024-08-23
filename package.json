@@ -12,7 +12,8 @@
     "**/loader-utils": "2.0.4",
     "**/parse-url": "9.2.0",
     "**/shell-quote": "1.8.1",
-    "**/d3-color": "3.1.0"
+    "**/d3-color": "3.1.0",
+    "**/node-fetch": "2.6.7"
   },
   "scripts": {
     "outdated:taze": "bunx taze@latest -r",
