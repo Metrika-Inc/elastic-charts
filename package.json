@@ -14,7 +14,8 @@
     "**/shell-quote": "1.8.1",
     "**/d3-color": "3.1.0",
     "**/node-fetch": "2.6.7",
-    "**/trim-newlines": "3.0.1"
+    "**/trim-newlines": "3.0.1",
+    "**/marked": "4.0.10"
   },
   "scripts": {
     "outdated:taze": "bunx taze@latest -r",
